@@ -14,7 +14,7 @@ const app = express()
 const port = process.env.PORT || 8000;
 
 const corsOptions = {
-    origin: 'https://www.cycodesystems.com',
+    origin: '*',
     optionsSuccessStatus: 200 ,
     allowedHeaders: ['Content-Type', 'Authorization'],
   };

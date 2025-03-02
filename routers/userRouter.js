@@ -3,10 +3,12 @@ import express from 'express'
 const userRouter = express.Router()
 
 
-import {postContactData} from '../controller/userController.js'
+import {postContactData,postEnrollContactData} from '../controller/userController.js'
 
 
-userRouter.post('/enquiry',postContactData)
+userRouter.post('/contact',postContactData)
+userRouter.post('/enroll',postEnrollContactData)
+
 userRouter.get('/health', (req, res) => {
     res.status(200).json({ status: 'UP' });
 });
